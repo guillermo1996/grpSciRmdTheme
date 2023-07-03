@@ -1,3 +1,5 @@
+# sciRmdTheme-custom 0.3
+
 # sciRmdTheme 0.2
 
 ## New Features

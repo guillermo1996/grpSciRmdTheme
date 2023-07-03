@@ -12,7 +12,8 @@ set.theme(
   header.color = NULL,
   list.group.icon = c("circle", "square", "star", "arrow", "quote", "heart"),
   font.family = NULL,
-  font.color = NULL
+  font.color = NULL,
+  figure.perc = 100
 )
 }
 \arguments{

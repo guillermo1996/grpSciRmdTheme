@@ -39,20 +39,21 @@ set.theme <- function(
   header.color = NULL,
   list.group.icon = c("circle", "square", "star", "arrow", "quote","heart"),
   font.family = NULL,
-  font.color = NULL
-  ) {
+  font.color = NULL,
+  figure.perc = 100
+) {
   # set content
   con <- ""
 
   # set list symbol
   list.group.icon <- match.arg(list.group.icon)
   list.group.html <- switch(list.group.icon,
-    "circle" = "&#9864;",
-    "square" = "&#9744;",
-    "star" = "&#10029;",
-    "arrow" = "&#10097;",
-    "quote" = "&#10077;",
-    "heart" = "&#10084;"
+                            "circle" = "&#9864;",
+                            "square" = "&#9744;",
+                            "star" = "&#10029;",
+                            "arrow" = "&#10097;",
+                            "quote" = "&#10077;",
+                            "heart" = "&#10084;"
   )
 
   # extract template
@@ -95,6 +96,8 @@ set.theme <- function(
   theme.02.js <- paste0(template.loc(), "/", theme.01, ".js")
   if (file.exists(theme.02.js)) {
     con <- c(con, "<script>", readLines(theme.02.js), "</script>")
+    con <- gsub("min=\"1\" max=\"100\" value=\"100\"></div>",
+                paste0('min=\"1\" max=\"100\" value=\"', figure.perc, '\"></div>'), con)
     con <- gsub("listgroupixon", list.group.html, con)
   }
 
