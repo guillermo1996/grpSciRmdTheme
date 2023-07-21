@@ -117,7 +117,7 @@ margin: 25px 0px 20px 0px;
 }
 div.tocify {
 width: 20%;
-max-width: 260px;
+max-width: 300px;
 max-height: 85%;
 }
 .tocify {
@@ -150,7 +150,7 @@ max-width: 720px;
 max-width: 540px;
 }
 div.main-container {
-max-width: 1200px!important;
+max-width: 1280px!important;
 }
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
 width: 100%;
@@ -199,6 +199,9 @@ font-size: 2em;
 accent-color: gray;
 display: inline-block!important;
 width: 40%!important;
+margin-bottom: 7px;
+margin-top: 7px;
+height: 3pt!important;
 }
 .slidertableinput, .slidertablefont {
 width: 100%!important;
@@ -229,7 +232,7 @@ text-align: left;
 }
 .font-weight-bold{font-weight:bold!important;}
 div.tocifyx {
-width: 23%!important;
+width: 17%!important;
 max-width: unset!important;
 max-height: 85%!important;
 }

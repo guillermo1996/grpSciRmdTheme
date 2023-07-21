@@ -1,7 +1,7 @@
 Package: sciRmdTheme
 Type: Package
 Title: Upgraded 'Rmarkdown' Themes for Scientific Writing
-Version: 0.3
+Version: 0.3.2
 Author: Obinna Obianom, Guillermo Rocamora 
 Maintainer: Obinna Obianom <idonshayo@gmail.com>, Guillermo Rocamora Pérez <guillermorocamora@gmail.com> 
 Description: A set of 'Rmarkdown' themes for creating scientific and professional documents. Simple interface with features to ease navigation across the page and sub-pages.
@@ -19,4 +19,4 @@ Encoding: UTF-8
 VignetteBuilder: knitr
 Language: en-US
 LazyData: false
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
