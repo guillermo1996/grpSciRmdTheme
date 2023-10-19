@@ -1,13 +1,13 @@
-Package: sciRmdTheme
+Package: grpSciRmdTheme
 Type: Package
 Title: Upgraded 'Rmarkdown' Themes for Scientific Writing
-Version: 0.3.2
-Author: Obinna Obianom, Guillermo Rocamora 
-Maintainer: Obinna Obianom <idonshayo@gmail.com>, Guillermo Rocamora Pérez <guillermorocamora@gmail.com> 
-Description: A set of 'Rmarkdown' themes for creating scientific and professional documents. Simple interface with features to ease navigation across the page and sub-pages.
+Version: 0.4.0.1
+Author: Obinna Obianom, Guillermo Rocamora Pérez 
+Maintainer: Guillermo Rocamora Pérez <guillermorocamora@gmail.com> 
+Description: A set of 'Rmarkdown' themes for creating scientific and professional documents. Simple interface with features to ease navigation across the page and sub-pages. Modified by Guillermo Rocamora Pérez.
 License: MIT + file LICENSE
-URL: https://github.com/guillermo1996/sciRmdTheme
-BugReports: https://github.com/guillermo1996/sciRmdTheme
+URL: https://github.com/guillermo1996/grp-sciRmdTheme
+BugReports: https://github.com/guillermo1996/grp-sciRmdTheme
 Depends: 
     R (>= 3.4)
 Imports: 

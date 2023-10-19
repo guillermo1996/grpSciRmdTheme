@@ -38,6 +38,13 @@ document.addEventListener("DOMContentLoaded", function() {
     };
   });
 
+  $("details:has(img)").each(function(index, item) {
+    if (item.querySelector(":scope > img")) {
+      $(this).addClass("sliderimagep" + index);
+      $(this).prepend('<div class="d-flex font-weight-bold" style="font-size: 8pt">Resize image: &emsp;<input class="sliderimageinput" type="range" min="1" max="100" value="100"></div>');
+    };
+  });
+
   $(".sliderimageinput").on('input', function() {
     let newwidth = $(this).val();
     $(this).parent().parent().children("img").each(function(index, val) {

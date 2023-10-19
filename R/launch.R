@@ -113,7 +113,7 @@ set.theme <- function(
 }
 
 template.loc <- function(template = "themes") {
-  file.path(find.package(package = "sciRmdTheme"), template)
+  file.path(find.package(package = "grpSciRmdTheme"), template)
 }
 
 
