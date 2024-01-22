@@ -236,3 +236,99 @@ width: 17%!important;
 max-width: unset!important;
 max-height: 85%!important;
 }
+
+
+.dataTables_scrollHeadInner{
+  width:100% !important;
+}
+.dataTables_scrollHeadInner table{
+  width:100% !important;
+}
+
+h3, .h3 {
+  font-size: 22px!important;
+}
+h4, .h4 {
+  font-size: 18px!important;
+}
+h5, .h5 {
+  font-size: 16px!important;
+}
+.spacer {
+  border-top: 2px solid #ddd;
+  margin-top: 50px;
+}
+hr, .hr {
+  margin-bottom: 65px;
+}
+body{
+  font-size: 13px;
+}
+
+.tocify-subheader {
+    text-indent: 15px;
+    display: none;
+    font-size: 12px;
+}
+
+.break6 .nav-tabs, .break5 .nav-tabs, .break4 .nav-tabs, .break3 .nav-tabs, .break2 .nav-tabs{
+  display: grid;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.breakB6 .nav-tabs, .breakB5 .nav-tabs, .breakB4 .nav-tabs, .breakB3 .nav-tabs, .breakB2 .nav-tabs{
+  display: grid;
+  text-align: center;
+  font-size: 12px;
+}
+
+.break6 .nav-tabs:before, .break5 .nav-tabs:before, .break4 .nav-tabs:before, .break3 .nav-tabs:before, .break2 .nav-tabs:before,
+.breakB6 .nav-tabs:before, .breakB5 .nav-tabs:before, .breakB4 .nav-tabs:before, .breakB3 .nav-tabs:before, .breakB2 .nav-tabs:before,
+.break6 .nav-tabs:after, .break5 .nav-tabs:after, .break4 .nav-tabs:after, .break3 .nav-tabs:after, .break2 .nav-tabs:after,
+.breakB6 .nav-tabs:after, .breakB5 .nav-tabs:after, .breakB4 .nav-tabs:after, .breakB3 .nav-tabs:after, .breakB2 .nav-tabs:after {
+  content: unset;
+}
+
+.break6 .nav-tabs{
+  grid-template-columns: repeat(6, 1fr);
+}
+.break5 .nav-tabs{
+  grid-template-columns: repeat(5, 1fr);
+}
+.break4 .nav-tabs{
+  grid-template-columns: repeat(4, 1fr);
+}
+.break3 .nav-tabs{
+  grid-template-columns: repeat(3, 1fr);
+}
+.break2 .nav-tabs{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.breakB6 .nav-tabs{
+  grid-template-columns: repeat(6, 1fr);
+}
+.breakB5 .nav-tabs{
+  grid-template-columns: repeat(5, 1fr);
+}
+.breakB4 .nav-tabs{
+  grid-template-columns: repeat(4, 1fr);
+}
+.breakB3 .nav-tabs{
+  grid-template-columns: repeat(3, 1fr);
+}
+.breakB2 .nav-tabs{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.stop-break .nav-tabs {
+  display: flex;
+  font-size: 13px;
+  font-weight: normal;
+}
+.stop-break .nav-tabs:before,
+.stop-break .nav-tabs:after {
+  content: unset;
+}
