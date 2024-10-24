@@ -150,7 +150,7 @@ max-width: 720px;
 max-width: 540px;
 }
 div.main-container {
-max-width: 1280px!important;
+max-width: 1580px!important;
 }
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
 width: 100%;
@@ -182,7 +182,7 @@ margin-top: 10px;
 margin-bottom: 10px;
 }
 h1, .h1, h2, .h2, h3, .h3 {
-margin-top: 20px;
+margin-top: 40px;
 margin-bottom: 10px;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -265,32 +265,45 @@ body{
   font-size: 13px;
 }
 
+h3.subtitle {
+  color: darkblue !important;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+#header .title {
+  margin-bottom: 5px;
+}
+
 .tocify-subheader {
     text-indent: 15px;
     display: none;
     font-size: 12px;
 }
 
-.break6 .nav-tabs, .break5 .nav-tabs, .break4 .nav-tabs, .break3 .nav-tabs, .break2 .nav-tabs{
+.break7 .nav-tabs, .break6 .nav-tabs, .break5 .nav-tabs, .break4 .nav-tabs, .break3 .nav-tabs, .break2 .nav-tabs{
   display: grid;
   text-align: center;
   font-size: 14px;
   font-weight: bold;
 }
 
-.breakB6 .nav-tabs, .breakB5 .nav-tabs, .breakB4 .nav-tabs, .breakB3 .nav-tabs, .breakB2 .nav-tabs{
+.breakB7 .nav-tabs, .breakB6 .nav-tabs, .breakB5 .nav-tabs, .breakB4 .nav-tabs, .breakB3 .nav-tabs, .breakB2 .nav-tabs{
   display: grid;
   text-align: center;
   font-size: 12px;
 }
 
-.break6 .nav-tabs:before, .break5 .nav-tabs:before, .break4 .nav-tabs:before, .break3 .nav-tabs:before, .break2 .nav-tabs:before,
-.breakB6 .nav-tabs:before, .breakB5 .nav-tabs:before, .breakB4 .nav-tabs:before, .breakB3 .nav-tabs:before, .breakB2 .nav-tabs:before,
-.break6 .nav-tabs:after, .break5 .nav-tabs:after, .break4 .nav-tabs:after, .break3 .nav-tabs:after, .break2 .nav-tabs:after,
-.breakB6 .nav-tabs:after, .breakB5 .nav-tabs:after, .breakB4 .nav-tabs:after, .breakB3 .nav-tabs:after, .breakB2 .nav-tabs:after {
+.break7 .nav-tabs:before, .break6 .nav-tabs:before, .break5 .nav-tabs:before, .break4 .nav-tabs:before, .break3 .nav-tabs:before, .break2 .nav-tabs:before,
+.breakB7 .nav-tabs:before, .breakB6 .nav-tabs:before, .breakB5 .nav-tabs:before, .breakB4 .nav-tabs:before, .breakB3 .nav-tabs:before, .breakB2 .nav-tabs:before,
+.break7 .nav-tabs:after, .break6 .nav-tabs:after, .break5 .nav-tabs:after, .break4 .nav-tabs:after, .break3 .nav-tabs:after, .break2 .nav-tabs:after,
+.breakB7 .nav-tabs:after, .breakB6 .nav-tabs:after, .breakB5 .nav-tabs:after, .breakB4 .nav-tabs:after, .breakB3 .nav-tabs:after, .breakB2 .nav-tabs:after {
   content: unset;
 }
 
+.break7 .nav-tabs{
+  grid-template-columns: repeat(7, 1fr);
+}
 .break6 .nav-tabs{
   grid-template-columns: repeat(6, 1fr);
 }
@@ -307,6 +320,9 @@ body{
   grid-template-columns: repeat(2, 1fr);
 }
 
+.breakB7 .nav-tabs{
+  grid-template-columns: repeat(7, 1fr);
+}
 .breakB6 .nav-tabs{
   grid-template-columns: repeat(6, 1fr);
 }
@@ -332,3 +348,4 @@ body{
 .stop-break .nav-tabs:after {
   content: unset;
 }
+

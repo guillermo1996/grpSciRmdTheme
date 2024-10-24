@@ -13,7 +13,7 @@ output:
 # Theme setting
 
 ```{r,echo=TRUE}
-sciRmdTheme::set.theme(
+grpSciRmdTheme::set.theme(
   theme = "default",
   color = "purple",
   header.sticky=TRUE,
