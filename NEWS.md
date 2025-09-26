@@ -1,4 +1,6 @@
-# sciRmdTheme-custom 0.3
+# sciRmdTheme-custom 0.5.0
+
+* Clean-up the code for better integration
 
 # sciRmdTheme 0.2
 

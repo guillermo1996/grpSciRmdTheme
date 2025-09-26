@@ -71,7 +71,8 @@ set.theme <- function(
       con <- gsub("#header \\{", "#headerx {", con)
     }
     if (!is.null(header.image)) {
-      con <- gsub("#headerx:before \\{", "#header:before {", con)
+      con <- gsub("/* #headerx:before {", "/#headerx:before {", con)
+      con <- gsub("background-size: cover;} */", "background-size: cover;}", con)
       con <- gsub("headerximgurl", header.image, con)
     }
     if(!is.null(font.family))
