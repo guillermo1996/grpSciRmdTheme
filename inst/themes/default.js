@@ -55,3 +55,37 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".hidden-heading").forEach(function(container){
+    container.querySelectorAll("h1,h2,h3,h4,h5,h6").forEach(function(h){
+      h.style.setProperty("font-size", "0", "important");
+      h.style.setProperty("line-height", "0", "important");
+      h.style.setProperty("margin", "0", "important");
+      h.style.setProperty("padding", "0", "important");
+      h.setAttribute("aria-hidden", "true");
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".collapse-toggle").forEach(function(btn) {
+    var targetSelector = btn.getAttribute("data-target");
+    if (!targetSelector) return;
+    var wrapper = document.querySelector(targetSelector);
+    if (!wrapper) return;
+
+    // initialize collapsed by default (remove if you want open by default)
+    wrapper.classList.add("collapsed");
+    btn.setAttribute("aria-expanded", "false");
+
+    btn.addEventListener("click", function () {
+      var isCollapsed = wrapper.classList.toggle("collapsed");
+      if (isCollapsed) {
+        btn.setAttribute("aria-expanded","false");
+      } else {
+        btn.setAttribute("aria-expanded","true");
+      }
+    });
+  });
+});

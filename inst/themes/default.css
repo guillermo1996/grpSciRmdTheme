@@ -348,3 +348,39 @@ h3.subtitle {
   content: unset;
 }
 
+/* hide the text of headings tagged .hidden-heading while retaining the element */
+.hidden-heading h1,
+.hidden-heading h2,
+.hidden-heading h3,
+.hidden-heading h4,
+.hidden-heading h5,
+.hidden-heading h6 {
+  font-size: 0 !important;
+  line-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: transparent !important; /* optional */
+}
+
+/* wrapper that contains the ## + ### headings (the whole tabset block) */
+.tabset-wrapper.collapsed > * {
+  display: none; /* hide everything inside the wrapper when collapsed */
+}
+/* but keep the wrapper itself visible so anchors etc still work (heading remains in DOM) */
+.tabset-wrapper.collapsed {
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* style for toggle button */
+.collapse-toggle {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
