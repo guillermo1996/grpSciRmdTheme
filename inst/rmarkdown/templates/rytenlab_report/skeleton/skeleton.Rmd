@@ -1,0 +1,139 @@
+---
+title: |
+  | ID - Report title
+subtitle: |
+  | subtitle
+author:
+- name: "Guillermo Rocamora Pérez"
+  affiliation: UCL - Version 1.0
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  bookdown::html_document2:
+    figure_caption: yes
+    code_folding: hide
+    theme: paper
+    highlight: pygments
+    df_print: paged
+    toc: true
+    toc_depth: 3
+    toc_float: true
+    number_sections: true
+  md_document:
+    variant: markdown_github
+    toc: true
+    number_sections: true
+always_allow_html: true
+link-citations: true
+notes-after-punctuation: false
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/dependent/jhep-reports.csl
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{R setup, echo = F, message = F, warning = F}
+# Load libraries
+library(tidyverse)
+
+# Define main path
+main_path <- here::here()
+
+# Source helper functions
+source(file.path(main_path, "R/hf_graph_and_themes.R"))
+source(file.path(main_path, "R/hf_notebooks.R"))
+
+knitr::read_chunk(file.path(main_path, "R/hf_graph_and_themes.R"))
+knitr::read_chunk(file.path(main_path, "R/hf_notebooks.R"))
+
+# Set options
+knitr::opts_chunk$set(echo = T, warning = F, message = F, 
+                      out.width="100%", fig.align = "center", dpi = 300, 
+                      fig.height = 7.2, fig.width = 7.2)
+```
+
+```{r setup-theme, echo = F, results = "asis"}
+## Custom sciRmdTheme with increased width.
+## Please ask guillermorocamora@gmail.com for more details.
+## Download from devtools::install_github("https://github.com/guillermo1996/grpSciRmdTheme")
+if(require(grpSciRmdTheme)){
+  grpSciRmdTheme::set.theme(
+    theme = "default",
+    color = NULL,
+    header.sticky = FALSE,
+    list.group.icon = "arrow",
+    font.family = "Arial",
+    font.color = "black",
+    header.color = "darkblue",
+    figure.perc = 100
+  )
+}
+
+## A bug in recent versions of KableExtra requires to load the HTML classes in
+## some circumstances.
+kableExtra::html_dependency_lightable()
+
+## Custom styles for the output html
+cat('
+<style type="text/css">
+</style>')
+
+## To have sections tab sections inside an expanded list, apply the following template:
+
+# ### Hidden Section {.unlisted .unnumbered .hidden-heading .tabset .break7}
+# <button class="collapse-toggle" data-target="#collapsible_id">▶ Expand to see the results for Anna-Leigh TDP43 junction list:</button>
+#   
+# ::: {#collapsible_id .tabset-wrapper}
+# ```{r, fig.width=12, fig.height=4.5, results='asis', echo = F}
+# r <- lapply(iterable, function(i){
+#   cat("#### ", i, " {-}\n\n", sep = "")
+#   plot()
+#   cat("\n\n")
+# })
+# ```
+# :::
+```
+
+# RMarkdown Notes
+
+Fill this section temporary in the development of the report. Delete if not needed.
+  
+# Introduction {.spacer #sec:introduction}
+
+## Script Parameters
+
+This section defines parameters that control the behavior of the analysis pipeline. Currently, no additional parameters are required beyond those defined in the script paths section.
+
+```{r setup-parameters}
+```
+
+## Script Paths
+
+All supporting files are organized within the project directory structure. The man project folder is located in the `main_path` directory.
+
+```{r setup-paths}
+```
+
+
+## Helper Functions
+
+This section includes custom functions required to execute the analysis and generate the report. Functions are organized into three categories:
+
++ **Processing functions**: data manipulation functions required for the script execution.
+
+```{r hf_processing, results='asis', echo = T}
+```
+
++ **Notebook functions**: utilities for formatting tables, styling output and rendering report elements.
+
+```{r hf_notebook, results='asis', echo = F}
+write_functions(c("printPrettyDf"))
+```
+
++ **Graphic functions**: for creating plots, visualizations and figure formatting.
+
+```{r hf_graphics, results='asis', echo = F}
+```
+
+# Methods {.spacer #sec:methods}
+
+# Results {.spacer #sec:results}
+

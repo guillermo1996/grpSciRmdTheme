@@ -1,0 +1,3 @@
+name: "RytenLab Report Template"
+description: "A custom template for reports."
+create_dir: FALSE  # Set TRUE if multiple files are needed
