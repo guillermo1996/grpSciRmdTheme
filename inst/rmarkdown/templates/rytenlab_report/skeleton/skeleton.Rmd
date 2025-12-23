@@ -137,3 +137,14 @@ write_functions(c("printPrettyDf"))
 
 # Results {.spacer #sec:results}
 
+# Session info {.spacer}
+
+<details>
+<summary>Show/hide</summary>
+```{r reproducibility, echo = FALSE}
+# Session info
+library("sessioninfo")
+options(width = 120)
+session_info()
+```
+</details>

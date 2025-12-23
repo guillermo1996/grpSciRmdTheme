@@ -3,14 +3,12 @@ function waitForElm(selector) {
         if (document.querySelector(selector)) {
             return resolve(document.querySelector(selector));
         }
-
         const observer = new MutationObserver(mutations => {
             if (document.querySelector(selector)) {
                 resolve(document.querySelector(selector));
                 observer.disconnect();
             }
         });
-
         observer.observe(document.body, {
             childList: true,
             subtree: true
@@ -22,29 +20,25 @@ wFEelm = '.list-group-item';
 waitForElm(wFEelm).then((elm) => {
   $(wFEelm).prepend('<b>listgroupixon&emsp;</b>');
 });
-
 document.addEventListener("DOMContentLoaded", function() {
   $("p:has(img)").each(function(index, item) {
     if (item.querySelector(":scope > img")) {
       $(this).addClass("sliderimagep" + index);
       $(this).prepend('<div class="d-flex font-weight-bold" style="font-size: 8pt">Resize image: &emsp;<input class="sliderimageinput" type="range" min="1" max="100" value="100"></div>');
-    };
+    }
   });
-
   $("div:has(img)").each(function(index, item) {
     if (item.querySelector(":scope > img")) {
       $(this).addClass("sliderimagep" + index);
       $(this).prepend('<div class="d-flex font-weight-bold" style="font-size: 8pt">Resize image: &emsp;<input class="sliderimageinput" type="range" min="1" max="100" value="100"></div>');
-    };
+    }
   });
-
   $("details:has(img)").each(function(index, item) {
     if (item.querySelector(":scope > img")) {
       $(this).addClass("sliderimagep" + index);
       $(this).prepend('<div class="d-flex font-weight-bold" style="font-size: 8pt">Resize image: &emsp;<input class="sliderimageinput" type="range" min="1" max="100" value="100"></div>');
-    };
+    }
   });
-
   $(".sliderimageinput").on('input', function() {
     let newwidth = $(this).val();
     $(this).parent().parent().children("img").each(function(index, val) {
@@ -54,9 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
       $(this).attr('style', 'font-size:'+ newwidth + '%');
     });
   });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".hidden-heading").forEach(function(container){
     container.querySelectorAll("h1,h2,h3,h4,h5,h6").forEach(function(h){
       h.style.setProperty("font-size", "0", "important");
@@ -66,19 +57,13 @@ document.addEventListener("DOMContentLoaded", function () {
       h.setAttribute("aria-hidden", "true");
     });
   });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".collapse-toggle").forEach(function(btn) {
     var targetSelector = btn.getAttribute("data-target");
     if (!targetSelector) return;
     var wrapper = document.querySelector(targetSelector);
     if (!wrapper) return;
-
-    // initialize collapsed by default (remove if you want open by default)
     wrapper.classList.add("collapsed");
     btn.setAttribute("aria-expanded", "false");
-
     btn.addEventListener("click", function () {
       var isCollapsed = wrapper.classList.toggle("collapsed");
       if (isCollapsed) {

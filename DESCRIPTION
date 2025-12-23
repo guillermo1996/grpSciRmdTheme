@@ -1,7 +1,7 @@
 Package: grpSciRmdTheme
 Type: Package
 Title: Upgraded 'Rmarkdown' Themes for Scientific Writing
-Version: 0.5.2
+Version: 0.5.4
 Author: Obinna Obianom, Guillermo Rocamora Pérez 
 Maintainer: Guillermo Rocamora Pérez <guillermorocamora@gmail.com> 
 Description: A set of 'Rmarkdown' themes for creating scientific and professional documents. Simple interface with features to ease navigation across the page and sub-pages. Modified by Guillermo Rocamora Pérez.
